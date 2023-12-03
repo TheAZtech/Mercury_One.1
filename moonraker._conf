@@ -4,22 +4,18 @@ port: 7125
 klippy_uds_address: /home/mgrupe/printer_data/comms/klippy.sock
 
 [authorization]
+force_logins: false
 trusted_clients:
-    10.0.0.0/8
-    127.0.0.0/8
-    169.254.0.0/16
-    172.16.0.0/12
+    192.168.1.1
     192.168.0.0/16
     FE80::/10
     ::1/128
 cors_domains:
-    *.lan
     *.local
     *://localhost
     *://localhost:*
-    *://my.mainsail.xyz
-    *://app.fluidd.xyz
-
+    zerog.local
+    
 [file_manager]
 enable_object_processing: True
 
@@ -83,4 +79,10 @@ path: ~/klipper-led_effect
 origin: https://github.com/julianschill/klipper-led_effect.git
 is_system_service: False
 
-
+# Crowsnest update_manager entry
+[update_manager crowsnest]
+type: git_repo
+path: ~/crowsnest
+origin: https://github.com/mainsail-crew/crowsnest.git
+managed_services: crowsnest
+install_script: tools/pkglist.sh

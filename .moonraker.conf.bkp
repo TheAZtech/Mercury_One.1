@@ -9,6 +9,7 @@ trusted_clients =
 	127.0.0.0/8
 	169.254.0.0/16
 	172.16.0.0/12
+	172.17.0.0/16
 	192.168.0.0/16
 	FE80::/10
 	::1/128
@@ -17,8 +18,6 @@ cors_domains =
 	*.local
 	*://localhost
 	*://localhost:*
-	*://my.mainsail.xyz
-	*://app.fluidd.xyz
 
 [file_manager]
 enable_object_processing = True
@@ -83,10 +82,7 @@ path = ~/klipper-led_effect
 origin = https://github.com/julianschill/klipper-led_effect.git
 is_system_service = False
 
-[update_manager crowsnest]
-type = git_repo
-path = ~/crowsnest
-origin = https://github.com/mainsail-crew/crowsnest.git
-managed_services = crowsnest
-install_script = tools/pkglist.sh
+[spoolman]
+server = http://192.168.1.193:7912
+sync_rate = 5
 
