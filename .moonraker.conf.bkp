@@ -98,13 +98,6 @@ path = ~/klipper-led_effect
 origin = https://github.com/julianschill/klipper-led_effect.git
 is_system_service = False
 
-[update_manager crowsnest]
-type = git_repo
-path = ~/crowsnest
-origin = https://github.com/mainsail-crew/crowsnest.git
-managed_services = crowsnest
-install_script = tools/install.sh
-
 [update_manager moonraker-obico]
 type = git_repo
 path = /home/mgrupe/moonraker-obico
