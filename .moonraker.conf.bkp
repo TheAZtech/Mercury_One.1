@@ -85,6 +85,16 @@ managed_services = KlipperScreen
 server = http://192.168.40.171:7912
 sync_rate = 5
 
+[update_manager Klippain-ShakeTune]
+type = git_repo
+origin = https://github.com/Frix-x/klippain-shaketune.git
+path = ~/klippain_shaketune
+virtualenv = ~/klippy-env
+requirements = requirements.txt
+system_dependencies = system-dependencies.json
+primary_branch = main
+managed_services = klipper
+
 [update_manager trad_rack]
 type = git_repo
 path = ~/trad_rack_klippy_module
